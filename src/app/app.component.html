@@ -1,0 +1,74 @@
+<div class="trade-add-execution-wrapper">
+    <div class="-menubar-wrapper trade-tab-section">
+        <form [formGroup]="addExecutionFormGroup" class="-form">
+            <div class="row-height">
+                <mat-label>Execution time: </mat-label>
+                <mat-form-field appearance="outline" class="embed-submit-field">
+
+
+                    <!-- <div class="embed-submit-field">
+                <input matInput type="text" formControlName="executionTimeHRS" />
+                <mat-icon Id fisStyle IconStyle="md" fisIcon="arrow-down" class="icon-up"
+                    (click)="incrementHRS()">
+                </mat-icon>
+                <mat-icon Id fisStyle IconStyle="md" fisIcon="arrow-down" class="icon-down"
+                    (click)="decrementHRS()">
+                </mat-icon>
+
+
+            </div> -->
+                    <!-- <div class="embed-submit-field"> -->
+                    <input matInput type="text" [formControl]="addExecutionFormGroup.controls['executionTimeHRS']"
+                        vpmOmsTimeHours [executionTimeHRS]="addExecutionFormGroup.controls['executionTimeHRS']"
+                        [hours]="hours" fisStyle='' />
+                    <div class="icon-container">
+                        <mat-icon Id fisStyle IconStyle="md" fisIcon="arrow-down" class="icon-up"
+                            (click)="incrementHRS()">
+                        </mat-icon>
+                        <mat-icon Id fisStyle IconStyle="md" fisIcon="arrow-down" class="icon-down"
+                            (click)="decrementHRS()">
+                        </mat-icon>
+                    </div>
+
+                    <!-- </div> -->
+                </mat-form-field>
+                <mat-label> Hrs </mat-label>
+                <mat-form-field appearance="outline" class="embed-submit-field">
+                    <!-- <div class="embed-submit-field"> -->
+                    <input matInput type="text" [formControl]="addExecutionFormGroup.controls['executionTimeMins']"
+                        vpmOmsTimeMins [executionTimeMins]="addExecutionFormGroup.controls['executionTimeMins']"
+                        [mins]="mins" fisStyle='' />
+                    <div class="icon-container">
+                        <mat-icon Id fisStyle IconStyle="md" fisIcon="arrow-down" class="icon-up"
+                            (click)="incrementMins()">
+                        </mat-icon>
+                        <mat-icon Id fisStyle IconStyle="md" fisIcon="arrow-down" class="icon-down"
+                            (click)="decrementMins()">
+                        </mat-icon>
+                    </div>
+
+                    <!-- </div> -->
+                </mat-form-field>
+                <mat-label> Mins</mat-label>
+            </div>
+            <div class="row-height">
+                <table>
+                    <tr>
+                        <td>Execution time 2: </td>
+                        <td>
+                            <ngx-timepicker-field [format]="24"
+                                [formControl]="addExecutionFormGroup.controls['hoursControl']" class="second"
+                                [controlOnly]="true">
+                            </ngx-timepicker-field>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+    <hr class="footer-separator">
+    <div class="trade-dialogue-footer">
+        <button mat-raised-button fisStyle color="primary" Id (click)="ValidateForm()" #execute>Execute</button>
+        <button mat-raised-button fisStyle color="secondary" Id class="secondary-btn" #cancel>Cancel</button>
+    </div>
+</div>

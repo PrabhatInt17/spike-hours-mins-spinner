@@ -1,0 +1,108 @@
+.trade-add-execution-wrapper {
+  .trade-add-execution-title {
+    margin: 0;
+    padding: 10px 20px;
+    font-weight: 600;
+  }
+  .trade-tab-section {
+    padding: 20px;
+    /* height and width needs to be adjusted in future */
+    width: 800px;
+    height: 400px;
+    ruf-menubar {
+      display: flex;
+      border: solid 1px;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-infix {
+      padding: 0.5em 0 0em 0;
+    }
+    .mat-form-field-infix {
+      padding: 0 0;
+      border-top: 0.84375em solid transparent;
+      border-bottom: 0.84375em solid transparent;
+    }
+    .mat-form-field-wrapper {
+      padding-bottom: 0em;
+    }
+  }
+  hr.footer-separator {
+    border-top: 0.25px solid rgb(192, 190, 190);
+  }
+  .trade-dialogue-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px 20px;
+  }
+
+  .secondary-btn {
+    margin-left: 16px;
+  }
+
+  .embed-submit-field {
+    position: relative;
+    width: 4.75rem;
+
+    input {
+      font-size: 1.125rem;
+    }
+
+    .icon-down {
+      position: absolute;
+      top: 0.6875rem;
+    }
+    .icon-up {
+      position: absolute;
+      top: -0.75rem;
+      transform: rotate(180deg);
+    }
+    .icon-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: absolute;
+      top: 0.53125rem;
+      right: -0.4rem;
+
+      mat-icon[fisStyle=''] {
+        font-size: 2rem;
+        line-height: 0.8rem;
+      }
+    }
+  }
+
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  mat-icon[fisStyle='']:hover {
+    background-color: rgb(214, 211, 211);
+  }
+  mat-icon[fisStyle='']:target {
+    color: rgb(255, 250, 250);
+  }
+
+  // input.ng-invalid.ng-touched {
+  //   border: 1px solid rgb(247, 101, 101) !important;
+  // }
+
+  .ngx-timepicker {
+    border-bottom: 0 !important;
+  }
+  .ngx-timepicker-control__arrows {
+    top: 2px !important;
+  }
+  ngx-timepicker-time-control {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+  }
+
+  .ngx-timepicker__time-colon {
+    margin-left: 6px !important;
+    margin-right: 6px;
+  }
+}
